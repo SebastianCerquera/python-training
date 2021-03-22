@@ -10,7 +10,7 @@ This steps were tested on a debian based distribution (Linux Mint).
 ```shell
 sudo apt-get install python3 python3-pip
 
-sudo pip3 install jupyter
+sudo pip3 install jupyter jupytext
 ```
 
 ## Start training environment
