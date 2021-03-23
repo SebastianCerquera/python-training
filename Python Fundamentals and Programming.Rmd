@@ -21,9 +21,53 @@ jupyter:
 
 # Dictionaries and Sets
 
-```{python}
+https://realpython.com/python-sets/
 
+- Sets are unordered
+- Elements are uniq
+- Elements should be inmutable
+
+```{python}
+## The insertion order in sets is not preserved, it orders the elements to easily check for duplicates.
+
+ordered_set = set(range(10, 0, -2))
+ordered_set.add(5)
+ordered_set
 ```
+
+```{python}
+## It doesn't fail when we insert a duplicated element.
+
+ordered_set.add(5)
+ordered_set
+```
+
+```{python}
+## The elements contained by the set should be inmutable.
+
+### I am trying to reproduce this behaviours without success. 
+
+### I think that I need to understand how the implementation is hashing the object, 
+### it should break if the hash changes.
+class TestElement:
+    
+    def __init__(self, value):
+        self.a = value
+
+original_elements = []
+mutable_set = set([])
+
+for i in range(10):
+    el = TestElement(i)
+    original_elements.append(el)
+    mutable_set.add(el)
+    
+for el in original_elements:
+    el.a = el.a + 1
+```
+
+## Set operations
+
 
 # Conditional Execution & Loops
 
@@ -40,7 +84,11 @@ jupyter:
 # Functions
 
 ```{python}
+## Positional arguments
+```
 
+```{python}
+## Optional arguments
 ```
 
 # Modules
