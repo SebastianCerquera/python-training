@@ -78,7 +78,37 @@ for el in original_elements:
 # Comprehensions
 
 ```{python}
+## Simple comprehensions
 
+### This sintax creates a list
+
+list_comprenhension = [i**2 for i in range(10)]
+
+print("The type should be a list: {}".format(type(list_comprenhension)))
+
+list_comprenhension
+```
+
+```{python}
+### This sintax creates a generator
+
+generator_comprenhension = (i**2 for i in range(10))
+
+print("The type should be a generator: {}".format(type(generator_comprenhension)))
+
+generator_comprenhension
+```
+
+```{python}
+## https://stackoverflow.com/questions/18072759/list-comprehension-on-a-nested-list
+
+### Nested comprenhesion
+
+nested_comprenhension = [j**0.5 for j in [i**2 for i in range(10)]]
+
+print("The type should be a list: {}".format(type(nested_comprenhension)))
+
+nested_comprenhension
 ```
 
 # Functions
