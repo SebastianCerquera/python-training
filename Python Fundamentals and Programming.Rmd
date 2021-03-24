@@ -40,7 +40,36 @@ jupyter:
 # Functions
 
 ```{python}
+## Positional arguments
 
+def only_positional(a, b):
+    return a,b
+
+a, b = only_positional(1, 2)
+
+print("The arguments should match: 1 == {} and 2 == {}".format(a,b))
+```
+
+```{python}
+## Optional arguments
+
+def positional_optional(a, b=2):
+    return a,b
+
+a, b = positional_optional(1)
+
+print("The arguments should match: 1 == {} and 2 == {}".format(a,b))
+```
+
+```{python}
+## Optional arguments
+
+def positional_optional(a, b=3):
+    return a,b
+
+a, b = positional_optional(1, b=3)
+
+print("The arguments should match: 1 == {} and 3 == {}".format(a,b))
 ```
 
 # Modules
